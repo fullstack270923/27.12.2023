@@ -18,19 +18,20 @@
             }
         }
 
-        function print_min_max(start , end)  {
+        function print_min_max(start=10 , end, ph = 1)  {
             // let start = 4 , let end = 18
             for (let i = start; i <= end; i++) {
                 console.log(i);
             }
         }
+        debugger
         print_min_max(20, 20)
         print_min_max(1, 2, 3)
 
         print_to10()
         print_to10(4)
         print_to10(4, 20)
-        print_to10(end = 5)
+        print_to10(undefined, 5)
 
         // 1. write a function that multiple 2 numbers  x, y
         //   default values x = 1 y = 1
@@ -51,9 +52,9 @@
 
         // 3. write a function that divide 2 numbers x, y
         //   default values y = 1
-        // divide(5)
-        // divide (10)
-        // divie (10, 2)
+        // divide(5)      // 5 : 1 = 5
+        // divide (10)    // 10 : 1 = 10
+        // divide (10, 2) // 10 : 2 = 5
 
         function print_hi(fname = "John", lname = "Doe") {
             console.log(fname + " " + lname);
@@ -69,6 +70,17 @@
         // print_details('danny')
         // print_details('danny', 'USA')
         // *Bonus: call print_details with country 'Canada' and without name
+
+        function register(fname = "avi cohen", city, country) {
+
+        }
+        register(undefined, undefined, "ISRAEL")
+
+        function add(x, y) {
+            console.log(x + y);
+        }
+        add(1, 2, 3)
+
     </script>
 </body>
 

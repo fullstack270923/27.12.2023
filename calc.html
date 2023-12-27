@@ -7,8 +7,10 @@
 
 <body>
     <button id="plus_btn" onclick="click_btn('+')">+</button>
+    <button id="plus_btn" onclick="plus()">+</button>
     <p> </p>
     <button id="minus_btn" onclick="click_btn('-')">-</button>
+    <button id="minus_btn" onclick="minus()">-</button>
 
     <br />
     NUMBER: <input id="num1" type="number" /><button id="plus_btn" onclick="func1()">+</button>
@@ -23,11 +25,31 @@
             document.getElementById('result').innerHTML = x + " + " + y + " = " + (x+y)
         }
 
-        function click_btn(oper) {
-            switch (oper) {
-                case '+': alert('plus')
+        // <button id="plus_btn" onclick="plus()">+</button>
+        function plus() {
+            const x = parseInt(document.getElementById('num1').value)
+            const y = parseInt(document.getElementById('num2').value)
+            //alert(x + y)
+            document.getElementById('result').innerHTML = x + " + " + y + " = " + (x+y)
+        }
+
+        //<button id="minus_btn" onclick="click_btn('-')">-</button>
+        function minus() {
+            const x = parseInt(document.getElementById('num1').value)
+            const y = parseInt(document.getElementById('num2').value)
+            //alert(x + y)
+            document.getElementById('result').innerHTML = x + " - " + y + " = " + (x-y)
+        }        
+
+        // <button id="plus_btn" onclick="click_btn('+')">+</button>
+        // <button id="minus_btn" onclick="click_btn('-')">-</button>
+        function click_btn(x, y, math_operator) {
+            const num1 = parseInt(document.getElementById('num1').value)
+            const num2 = parseInt(document.getElementById('num2').value)            
+            switch (math_operator) {
+                case '+': document.getElementById('result').innerHTML = num1 + " + " + num2 + " = " + (num1+num2)
                     break
-                case '-': alert('minus')
+                case '-': document.getElementById('result').innerHTML = num1 + " - " + num2 + " = " + (num1-num2)
                     break
             }
         }
