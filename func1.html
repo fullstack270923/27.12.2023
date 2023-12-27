@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <button id="btn1" onclick="print_to10()">1-10</button>
+
+    <script>
+
+        function print_to10(start = 1 , end = 10) {
+            // let start = 4 , let end = 18
+            for (let i = start; i <= end; i++) {
+                console.log(i);
+            }
+        }
+
+        function print_min_max(start , end)  {
+            // let start = 4 , let end = 18
+            for (let i = start; i <= end; i++) {
+                console.log(i);
+            }
+        }
+        print_min_max(20, 20)
+        print_min_max(1, 2, 3)
+
+        print_to10()
+        print_to10(4)
+        print_to10(4, 20)
+        print_to10(end = 5)
+
+        // 1. write a function that multiple 2 numbers  x, y
+        //   default values x = 1 y = 1
+        function mul(x = 1, y = 1) {
+            console.log(x * y);
+        }
+        mul() // 1 * 1
+        mul(9) // 9 * 1
+        mul(9, 7) // 9 * 7
+        mul(x = 9, y = 7) // 9 * 7
+
+        // 2. write a function that sum 2 numbers x, y
+        //   default values x = 0, y = 0
+        // call this functions with no parameters --> sum()
+        // call this functions with 1 parameter --> sum(10)
+        // call this functions with 2 parameter --> sum(10, 30)
+
+
+        // 3. write a function that divide 2 numbers x, y
+        //   default values y = 1
+        // divide(5)
+        // divide (10)
+        // divie (10, 2)
+
+        function print_hi(fname = "John", lname = "Doe") {
+            console.log(fname + " " + lname);
+        }
+        print_hi() // John Doe
+        print_hi("Robert") // Robert Doe
+        print_hi("Robert", "Junior") // Robert Junior
+
+        // 4. write a function print_details , that gets 2 strings name, country
+        //        default value for name = "John doe"
+        //        default value for country = "Israel"
+        // print_details()
+        // print_details('danny')
+        // print_details('danny', 'USA')
+        // *Bonus: call print_details with country 'Canada' and without name
+    </script>
+</body>
+
+</html>
